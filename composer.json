@@ -1,6 +1,6 @@
 {
     "name": "einenlum/dyc",
-    "description": "A very simple DIC, supporting autowiring",
+    "description": "A very simple DIC, supporting autowiring (NOT production ready)",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -14,5 +14,17 @@
             "Dyc\\": "src/"
         }
     },
-    "require": {}
+    "autoload-dev": {
+        "psr-4": {
+            "Fixtures\\": "spec/fixtures/"
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "phpspec/phpspec": "^6.1",
+        "haydenpierce/class-finder": "^0.4.0"
+    },
+    "suggest": {
+        "haydenpierce/class-finder": "To get a list of FQCN to autoload"
+    }
 }

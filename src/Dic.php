@@ -2,6 +2,8 @@
 
 namespace Dyc;
 
+use Dyc\Exception\ServiceNotFoundException;
+
 class Dic
 {
     private $definitions = [];
@@ -18,7 +20,6 @@ class Dic
             };
         }
     }
-
     public function set(string $serviceId, callable $serviceInstanciation): void
     {
         $this->definitions[$serviceId] = $serviceInstanciation;
@@ -27,7 +28,7 @@ class Dic
     public function get(string $serviceId)
     {
         if (!array_key_exists($serviceId, $this->definitions)) {
-            throw new \Exception(sprintf('No service with id %s', $serviceId));
+            throw ServiceNotFoundException::forServiceId($serviceId);
         }
 
         return $this->definitions[$serviceId]($this);
