@@ -3,6 +3,7 @@
     "description": "A very simple DIC, supporting autowiring (NOT production ready)",
     "type": "library",
     "license": "MIT",
+    "version": "0.0.1",
     "authors": [
         {
             "name": "Yann Rabiller",
