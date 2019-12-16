@@ -1,0 +1,18 @@
+{
+    "name": "einenlum/dyc",
+    "description": "A very simple DIC, supporting autowiring",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yann Rabiller",
+            "email": "yann.rabiller@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Dyc\\": "src/"
+        }
+    },
+    "require": {}
+}
